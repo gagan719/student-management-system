@@ -1,6 +1,6 @@
              Student Management System HTML:
             
-            Login website:
+            #Login website code:
             
 <!DOCTYPE html>
 <html lang="en">
@@ -11,21 +11,7 @@
     <link rel="stylesheet" href="student management.css">
 </head>
 <body>
-     
-<header>
-<img src="C:\Users\user\Downloads\ChatGPT Image Jul 19, 2026, 01_42_05 PM.png" alt="Logo" class="logo" width="250" height="200">
-    
-
- 
-
-
-</header>
-
-
-
-
-
-
+  
     <div class="login-box">
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Username" required>
@@ -43,7 +29,7 @@
 </html>
 
 
-           Forget Password website:
+           #Forget Password website code:
 
 <!DOCTYPE html>
 <html>
@@ -69,7 +55,7 @@
 </html>
 
 
-     forget password CSS:
+     #forget password CSS Code:
 
 
 body{
@@ -114,7 +100,7 @@ a{
 
 
 
-           Registration website:
+           #Registration website code:
 
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +141,7 @@ a{
 
 
 
-           Student Management System CSS:
+           #Student Management System CSS Code:
 
 body{
     font-family: Arial, sans-serif;
@@ -278,13 +264,13 @@ p{
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background: url("C:/Users/user/Downloads/wVSIajhPlfZxS_DMlbu6y1LOJvhUEK5tdtkvZDuzNv1Fro3-nOGHk2gnVRQ7vlUhQD5s2Ia9EOT-Wr8zwVL3zoovA6ozNknwSlO-qlCG0n_tpPeOHHBQAs0-W3dLYggCh3QLTvNan0V0K64Qu6WPX7vpoeLSTyq0i09gq2j2S-U.jpeg") no-repeat center center fixed;
+    background: url("C:\\Users\\user\\Downloads\\ChatGPT Image Jul 19, 2026, 08_16_12 PM.png") no-repeat center center fixed;
     background-size: cover;
+    background-position: center;
 }
 
 
-
-          Student Management System JS:
+          #Student Management System JS Code:
 
 function login() {
     const username = document.getElementById('username').value;
