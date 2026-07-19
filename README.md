@@ -33,6 +33,7 @@
         <span class="toggle-password" id="togglePassword" onclick="togglePasswordVisibility()">Show Password</span>
         <button onclick="login()">Login</button>
         <p class="message" id="message"></p>
+        <p><a href="forget password.html">Forgot Password?</a></p>
         <p class="register-link">Don't have an account? <a href="register.html">Register</a></p>
     </div>
 
@@ -40,6 +41,78 @@
     <script src="student management.js"></script>
 </body>
 </html>
+
+
+           Forget Password website:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Forgot Password</h2>
+
+    <input type="email" id="email" placeholder="Enter your Email">
+
+    <button onclick="forgotPassword()">Submit</button>
+
+    <p><a href="student management.html">Back to Login</a></p>
+</div>
+
+<script src="student management.js"></script>
+
+</body>
+</html>
+
+
+     forget password CSS:
+
+
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+}
+
+.container{
+    width:350px;
+    margin:80px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    width:95%;
+    padding:10px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+a{
+    text-decoration:none;
+    color:#0d6efd;
+}
+
+
+
 
            Registration website:
 
@@ -241,6 +314,23 @@ function togglePasswordVisibility() {
     }
 
 }
+
+
+
+function forgotPassword() {
+
+    let email = document.getElementById("email").value;
+
+    if(email === ""){
+        alert("Please enter your email.");
+    }
+    else{
+        alert("Password reset link has been sent to " + email);
+
+        window.location.href = "student management.html";
+    }
+}
+
 
 
 
