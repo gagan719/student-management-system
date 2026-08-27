@@ -11,7 +11,7 @@ body{
 
 
 .login-box{
-    background-color: #ffffff;
+    background-color: #ba6e6e;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, green, 0, 0.1);
@@ -154,11 +154,4 @@ button:hover{
 a{
     text-decoration:none;
     color:#0d6efd;
-}
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background: url("C:\\Users\\user\\Downloads\\ChatGPT Image Jul 19, 2026, 08_16_12 PM.png") no-repeat center center fixed;
-    background-size: cover;
-    background-position: center;
 }
