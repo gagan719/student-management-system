@@ -1,0 +1,1108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Students | Student Management System</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Students CSS -->
+    <link rel="stylesheet" href="students.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- Logo -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+        </div>
+
+        <div class="logo-text">
+
+            <h2>EduManage</h2>
+
+            <span>Student Management</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="navigation">
+
+
+        <p class="menu-title">
+            MAIN MENU
+        </p>
+
+
+        <a href="home page.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="students.html"
+           class="nav-link active">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <span>Students</span>
+
+        </a>
+
+
+        <a href="faculty.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <span>Faculty</span>
+
+        </a>
+
+
+        <a href="courses.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>Courses</span>
+
+        </a>
+
+
+        <a href="attendance.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+        <p class="menu-title">
+            ACADEMIC
+        </p>
+
+
+        <a href="exams.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Exams & Marks</span>
+
+        </a>
+
+
+        <a href="fees.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <span>Fees</span>
+
+        </a>
+
+
+        <p class="menu-title">
+            MANAGEMENT
+        </p>
+
+
+        <a href="reports.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+
+        <a href="notifications.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>Notifications</span>
+
+            <span class="notification-count">
+                3
+            </span>
+
+        </a>
+
+
+        <a href="settings.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need Help?</strong>
+
+                <span>Contact support</span>
+
+            </div>
+
+        </div>
+
+
+        <a href="student management.html"
+           class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================= -->
+
+    <header class="top-header">
+
+
+        <button class="menu-button"
+                id="menuButton">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <div class="page-title">
+
+            <h1>Students</h1>
+
+            <p>
+                Manage and monitor all registered students.
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="headerSearch"
+                    placeholder="Search...">
+
+            </div>
+
+
+            <!-- Theme -->
+
+            <button
+                class="icon-button"
+                id="themeButton">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <!-- Notification -->
+
+            <a href="notifications.html"
+               class="icon-button notification-button">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </a>
+
+
+            <!-- Profile -->
+
+            <a href="settings.html"
+               class="profile">
+
+                <div class="profile-image">
+                    G
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>Gagan</strong>
+
+                    <span>Administrator</span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================= -->
+
+    <section class="students-page">
+
+
+        <!-- Page Header -->
+
+        <div class="students-header">
+
+
+            <div>
+
+                <span class="page-label">
+                    STUDENT MANAGEMENT
+                </span>
+
+                <h2>
+                    All Students
+                </h2>
+
+                <p>
+                    View, add, edit and manage student records.
+                </p>
+
+            </div>
+
+
+            <a href="add-student.html"
+               class="add-student-btn">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Add Student
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+        ================================================= -->
+
+        <div class="student-stats">
+
+
+            <div class="student-stat-card">
+
+                <div class="stat-icon students-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total Students</span>
+
+                    <h3>1,248</h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-stat-card">
+
+                <div class="stat-icon active-icon">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Active Students</span>
+
+                    <h3>1,176</h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-stat-card">
+
+                <div class="stat-icon pending-icon">
+
+                    <i class="fa-solid fa-user-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Pending</span>
+
+                    <h3>48</h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="student-stat-card">
+
+                <div class="stat-icon inactive-icon">
+
+                    <i class="fa-solid fa-user-xmark"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Inactive</span>
+
+                    <h3>24</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STUDENT TABLE CARD
+        ================================================= -->
+
+        <div class="students-card">
+
+
+            <!-- Filters -->
+
+            <div class="filter-section">
+
+
+                <div class="table-title">
+
+                    <h3>
+                        Student Records
+                    </h3>
+
+                    <span>
+                        1,248 students
+                    </span>
+
+                </div>
+
+
+                <div class="filters">
+
+
+                    <!-- Search -->
+
+                    <div class="table-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="studentSearch"
+                            placeholder="Search by name or ID...">
+
+                    </div>
+
+
+                    <!-- Department -->
+
+                    <select id="departmentFilter">
+
+                        <option value="all">
+                            All Departments
+                        </option>
+
+                        <option value="Computer Science">
+                            Computer Science
+                        </option>
+
+                        <option value="Artificial Intelligence">
+                            Artificial Intelligence
+                        </option>
+
+                        <option value="Data Science">
+                            Data Science
+                        </option>
+
+                        <option value="Computer Applications">
+                            Computer Applications
+                        </option>
+
+                    </select>
+
+
+                    <!-- Status -->
+
+                    <select id="statusFilter">
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+
+                    <button class="filter-button"
+                            id="filterButton">
+
+                        <i class="fa-solid fa-filter"></i>
+
+                        Filter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Table -->
+
+            <div class="table-wrapper">
+
+                <table id="studentTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                <input type="checkbox"
+                                       id="selectAll">
+                            </th>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Student ID
+                            </th>
+
+                            <th>
+                                Department
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- Student 1 -->
+
+                        <tr>
+
+                            <td>
+                                <input type="checkbox"
+                                       class="student-check">
+                            </td>
+
+                            <td>
+
+                                <div class="student">
+
+                                    <div class="student-avatar">
+                                        AK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Arun Kumar
+                                        </strong>
+
+                                        <span>
+                                            BCA
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                STU001
+                            </td>
+
+                            <td>
+                                Computer Science
+                            </td>
+
+                            <td>
+                                arun@gmail.com
+                            </td>
+
+                            <td>
+                                +91 98765 43210
+                            </td>
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="action-btn view"
+                                        title="View">
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+                                    <button
+                                        class="action-btn edit"
+                                        title="Edit">
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+                                    <button
+                                        class="action-btn delete"
+                                        title="Delete">
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Student 2 -->
+
+                        <tr>
+
+                            <td>
+                                <input type="checkbox"
+                                       class="student-check">
+                            </td>
+
+                            <td>
+
+                                <div class="student">
+
+                                    <div class="student-avatar purple">
+                                        PR
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya R
+                                        </strong>
+
+                                        <span>
+                                            BCA AI
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                STU002
+                            </td>
+
+                            <td>
+                                Artificial Intelligence
+                            </td>
+
+                            <td>
+                                priya@gmail.com
+                            </td>
+
+                            <td>
+                                +91 98765 12345
+                            </td>
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="action-btn view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="action-btn edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="action-btn delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Student 3 -->
+
+                        <tr>
+
+                            <td>
+                                <input type="checkbox"
+                                       class="student-check">
+                            </td>
+
+                            <td>
+
+                                <div class="student">
+
+                                    <div class="student-avatar orange">
+                                        VK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Vignesh Kumar
+                                        </strong>
+
+                                        <span>
+                                            BCA
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                STU003
+                            </td>
+
+                            <td>
+                                Data Science
+                            </td>
+
+                            <td>
+                                vignesh@gmail.com
+                            </td>
+
+                            <td>
+                                +91 91234 56789
+                            </td>
+
+                            <td>
+
+                                <span class="status pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="action-btn view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="action-btn edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="action-btn delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Student 4 -->
+
+                        <tr>
+
+                            <td>
+                                <input type="checkbox"
+                                       class="student-check">
+                            </td>
+
+                            <td>
+
+                                <div class="student">
+
+                                    <div class="student-avatar green">
+                                        SM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Siva Mani
+                                        </strong>
+
+                                        <span>
+                                            BCA
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                STU004
+                            </td>
+
+                            <td>
+                                Computer Applications
+                            </td>
+
+                            <td>
+                                siva@gmail.com
+                            </td>
+
+                            <td>
+                                +91 90123 45678
+                            </td>
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="action-btn view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="action-btn edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="action-btn delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Student 5 -->
+
+                        <tr>
+
+                            <td>
+                                <input type="checkbox"
+                                       class="student-check">
+                            </td>
+
+                            <td>
+
+                                <div class="student">
+
+                                    <div class="student-avatar">
+                                        SK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Santhosh Kumar
+                                        </strong>
+
+                                        <span>
+                                            BCA AI
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                STU005
+                            </td>
+
+                            <td>
+                                Artificial Intelligence
+                            </td>
+
+                            <td>
+                                santhosh@gmail.com
+                            </td>
+
+                            <td>
+                                +91 93456 78901
+                            </td>
+
+                            <td>
+
+                                <span class="status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button class="action-btn view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="action-btn edit">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="action-btn delete">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABLE FOOTER
+            ================================================= -->
+
+            <div class="table-footer">
+
+
+                <p>
+                    Showing
+                    <strong>1–5</strong>
+                    of
+                    <strong>1,248</strong>
+                    students
+                </p>
+
+
+                <div class="pagination">
+
+                    <button class="page-btn disabled">
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <button class="page-btn active">
+                        1
+                    </button>
+
+                    <button class="page-btn">
+                        2
+                    </button>
+
+                    <button class="page-btn">
+                        3
+                    </button>
+
+                    <span>
+                        ...
+                    </span>
+
+                    <button class="page-btn">
+                        250
+                    </button>
+
+
+                    <button class="page-btn">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<!-- Students JavaScript -->
+
+<script src="students.js"></script>
+
+
+</body>
+
+</html>
+

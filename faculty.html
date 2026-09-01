@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty Management | EduManage</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Faculty CSS -->
+    <link rel="stylesheet" href="faculty.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>EduManage</h2>
+
+            <span>Student Management</span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <p class="menu-title">MAIN MENU</p>
+
+
+        <a href="dashboard.html" class="nav-link">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="students.html" class="nav-link">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <span>Students</span>
+
+        </a>
+
+
+        <a href="faculty.html"
+           class="nav-link active">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <span>Faculty</span>
+
+        </a>
+
+
+        <a href="courses.html" class="nav-link">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>Courses</span>
+
+        </a>
+
+
+        <a href="attendance.html" class="nav-link">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+        <p class="menu-title">ACADEMIC</p>
+
+
+        <a href="exams.html" class="nav-link">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Exams & Marks</span>
+
+        </a>
+
+
+        <a href="fees.html" class="nav-link">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <span>Fees</span>
+
+        </a>
+
+
+        <p class="menu-title">MANAGEMENT</p>
+
+
+        <a href="reports.html" class="nav-link">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+
+        <a href="notifications.html" class="nav-link">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>Notifications</span>
+
+            <span class="notification-count">3</span>
+
+        </a>
+
+
+        <a href="settings.html" class="nav-link">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need Help?</strong>
+
+                <span>Contact support</span>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="student management.html"
+            class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================= -->
+
+    <header class="top-header">
+
+
+        <button
+            class="menu-button"
+            id="menuButton">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <div class="page-title">
+
+            <h1>Faculty Management</h1>
+
+            <p>
+                Manage faculty members and their information
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchFaculty"
+                    placeholder="Search faculty...">
+
+            </div>
+
+
+            <!-- THEME -->
+
+            <button
+                class="icon-button"
+                id="themeButton">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <!-- NOTIFICATION -->
+
+            <a
+                href="notifications.html"
+                class="icon-button">
+
+                <i class="fa-solid fa-bell"></i>
+
+            </a>
+
+
+            <!-- PROFILE -->
+
+            <div class="profile">
+
+                <div class="profile-image">
+                    G
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>Gagan</strong>
+
+                    <span>Administrator</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         FACULTY CONTENT
+    ================================================= -->
+
+    <section class="faculty-page">
+
+
+        <!-- PAGE TOP -->
+
+        <div class="page-top">
+
+            <div>
+
+                <h2>Faculty Members</h2>
+
+                <p>
+                    View and manage all faculty members
+                </p>
+
+            </div>
+
+
+            <button
+                class="add-faculty-button"
+                id="addFacultyButton">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Faculty
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================= -->
+
+        <div class="faculty-stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total Faculty</span>
+
+                    <strong id="totalFaculty">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Active Faculty</span>
+
+                    <strong id="activeFaculty">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Departments</span>
+
+                    <strong id="departmentCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div>
+
+                    <span>New This Month</span>
+
+                    <strong id="newFaculty">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FACULTY TABLE
+        ================================================= -->
+
+        <div class="faculty-card">
+
+
+            <div class="table-header">
+
+                <div>
+
+                    <h3>Faculty Directory</h3>
+
+                    <p>
+                        Complete list of faculty members
+                    </p>
+
+                </div>
+
+
+                <div class="table-actions">
+
+                    <select id="departmentFilter">
+
+                        <option value="">
+                            All Departments
+                        </option>
+
+                        <option value="Computer Science">
+                            Computer Science
+                        </option>
+
+                        <option value="Artificial Intelligence">
+                            Artificial Intelligence
+                        </option>
+
+                        <option value="Commerce">
+                            Commerce
+                        </option>
+
+                        <option value="Management">
+                            Management
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        class="filter-button"
+                        id="filterButton">
+
+                        <i class="fa-solid fa-filter"></i>
+
+                        Filter
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TABLE -->
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Faculty
+                            </th>
+
+                            <th>
+                                Faculty ID
+                            </th>
+
+                            <th>
+                                Department
+                            </th>
+
+                            <th>
+                                Designation
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="facultyTableBody">
+
+                        <!-- Faculty records added by JS -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="empty-state"
+                id="emptyState">
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h3>No Faculty Found</h3>
+
+                <p>
+                    No faculty members match your search.
+                </p>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <span id="showingText">
+                    Showing 0 faculty
+                </span>
+
+
+                <div class="page-buttons">
+
+                    <button
+                        id="previousPage"
+                        disabled>
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <button class="page-number active">
+                        1
+                    </button>
+
+
+                    <button
+                        id="nextPage"
+                        disabled>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     ADD FACULTY MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="facultyModal">
+
+
+    <div class="modal-content">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>Add New Faculty</h2>
+
+                <p>
+                    Enter faculty information below
+                </p>
+
+            </div>
+
+
+            <button
+                class="close-modal"
+                id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <form id="facultyForm">
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facultyName"
+                        placeholder="Enter full name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Faculty ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="facultyId"
+                        placeholder="Example: FAC001"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="facultyEmail"
+                        placeholder="faculty@example.com"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="facultyPhone"
+                        placeholder="Enter phone number"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Department
+                    </label>
+
+                    <select
+                        id="facultyDepartment"
+                        required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option>
+                            Computer Science
+                        </option>
+
+                        <option>
+                            Artificial Intelligence
+                        </option>
+
+                        <option>
+                            Commerce
+                        </option>
+
+                        <option>
+                            Management
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Designation
+                    </label>
+
+                    <select
+                        id="facultyDesignation"
+                        required>
+
+                        <option value="">
+                            Select Designation
+                        </option>
+
+                        <option>
+                            Professor
+                        </option>
+
+                        <option>
+                            Associate Professor
+                        </option>
+
+                        <option>
+                            Assistant Professor
+                        </option>
+
+                        <option>
+                            Head of Department
+                        </option>
+
+                        <option>
+                            Lecturer
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelModal">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Add Faculty
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="faculty.js"></script>
+
+
+</body>
+</html>
+
+

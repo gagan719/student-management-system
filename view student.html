@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>View Student | EduManage</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="view-student.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="logo-text">
+
+            <h2>EduManage</h2>
+
+            <span>Student Management</span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <p class="menu-title">
+            MAIN MENU
+        </p>
+
+
+        <a href="dashboard.html" class="nav-link">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="students.html" class="nav-link active">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <span>Students</span>
+
+        </a>
+
+
+        <a href="faculty.html" class="nav-link">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <span>Faculty</span>
+
+        </a>
+
+
+        <a href="courses.html" class="nav-link">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>Courses</span>
+
+        </a>
+
+
+        <a href="attendance.html" class="nav-link">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+        <p class="menu-title">
+            ACADEMIC
+        </p>
+
+
+        <a href="exams.html" class="nav-link">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Exams & Marks</span>
+
+        </a>
+
+
+        <a href="fees.html" class="nav-link">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <span>Fees</span>
+
+        </a>
+
+
+        <p class="menu-title">
+            MANAGEMENT
+        </p>
+
+
+        <a href="reports.html" class="nav-link">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+
+        <a href="notifications.html" class="nav-link">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>Notifications</span>
+
+            <span class="notification-count">3</span>
+
+        </a>
+
+
+        <a href="settings.html" class="nav-link">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need Help?</strong>
+
+                <span>Contact support</span>
+
+            </div>
+
+        </div>
+
+
+        <a href="student management.html" class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+        <button class="menu-button" id="menuButton">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <div class="page-title">
+
+            <h1>View Student</h1>
+
+            <p>Student profile and academic information</p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search student...">
+
+            </div>
+
+
+            <button
+                class="icon-button"
+                id="themeButton">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <a
+                href="notifications.html"
+                class="icon-button">
+
+                <i class="fa-solid fa-bell"></i>
+
+            </a>
+
+
+            <div class="profile">
+
+                <div class="profile-image">
+                    G
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>Gagan</strong>
+
+                    <span>Administrator</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENT
+    ===================================================== -->
+
+    <section class="student-page">
+
+
+        <!-- BACK BUTTON -->
+
+        <div class="top-actions">
+
+            <a href="students.html"
+               class="back-button">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Students
+
+            </a>
+
+
+            <div class="action-buttons">
+
+                <button
+                    class="edit-button"
+                    id="editStudent">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Edit Student
+
+                </button>
+
+
+                <button
+                    class="delete-button"
+                    id="deleteStudent">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STUDENT PROFILE
+        ================================================= -->
+
+        <div class="profile-card">
+
+
+            <div class="student-avatar" id="studentAvatar">
+                S
+            </div>
+
+
+            <div class="student-main-info">
+
+                <h2 id="studentName">
+                    Student Name
+                </h2>
+
+                <p id="studentCourse">
+                    Course
+                </p>
+
+                <div class="student-tags">
+
+                    <span class="tag" id="studentId">
+                        STU000
+                    </span>
+
+                    <span class="status active"
+                          id="studentStatus">
+
+                        Active
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-date">
+
+                <span>Joined</span>
+
+                <strong id="admissionDate">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             INFORMATION GRID
+        ================================================= -->
+
+        <div class="information-grid">
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="info-card">
+
+                <div class="info-heading">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                        <p>
+                            Basic student details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="details">
+
+
+                    <div class="detail-item">
+
+                        <span>Full Name</span>
+
+                        <strong id="detailName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Email Address</span>
+
+                        <strong id="detailEmail">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Phone Number</span>
+
+                        <strong id="detailPhone">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Date of Birth</span>
+
+                        <strong id="detailDob">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Gender</span>
+
+                        <strong id="detailGender">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACADEMIC INFORMATION -->
+
+            <div class="info-card">
+
+                <div class="info-heading">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Academic Information
+                        </h3>
+
+                        <p>
+                            Course and enrollment details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="details">
+
+
+                    <div class="detail-item">
+
+                        <span>Student ID</span>
+
+                        <strong id="detailStudentId">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Department</span>
+
+                        <strong id="detailDepartment">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Course</span>
+
+                        <strong id="detailCourse">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Year</span>
+
+                        <strong id="detailYear">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Admission Date</span>
+
+                        <strong id="detailAdmission">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADDRESS -->
+
+            <div class="info-card full-card">
+
+                <div class="info-heading">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Address Information
+                        </h3>
+
+                        <p>
+                            Student residential information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="address-details">
+
+                    <div class="address-item">
+
+                        <span>Address</span>
+
+                        <strong id="detailAddress">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="address-item">
+
+                        <span>City</span>
+
+                        <strong id="detailCity">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="address-item">
+
+                        <span>State</span>
+
+                        <strong id="detailState">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="address-item">
+
+                        <span>Pincode</span>
+
+                        <strong id="detailPincode">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACCOUNT -->
+
+            <div class="info-card full-card">
+
+                <div class="info-heading">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Account Information
+                        </h3>
+
+                        <p>
+                            Student account status
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-status">
+
+                    <div>
+
+                        <span>Account Status</span>
+
+                        <strong id="accountStatus">
+                            Active
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Role</span>
+
+                        <strong>
+                            Student
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Login Access</span>
+
+                        <strong class="access">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Enabled
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- JavaScript -->
+
+<script src="view-student.js"></script>
+
+</body>
+</html>
+

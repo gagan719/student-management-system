@@ -1,0 +1,1142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System | Home</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="home page.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     SIDEBAR
+================================================= -->
+
+<aside class="sidebar" id="sidebar">
+
+
+    <!-- Logo -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+        </div>
+
+        <div class="logo-text">
+
+            <h2>EduManage</h2>
+
+            <span>Student Management</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Navigation -->
+
+    <nav class="navigation">
+
+
+        <p class="menu-title">
+            MAIN MENU
+        </p>
+
+
+        <!-- Dashboard -->
+
+        <a href="home.html"
+           class="nav-link active">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- Students -->
+
+        <a href="students.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <span>Students</span>
+
+        </a>
+
+
+        <!-- Faculty -->
+
+        <a href="faculty.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            <span>Faculty</span>
+
+        </a>
+
+
+        <!-- Courses -->
+
+        <a href="courses.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>Courses</span>
+
+        </a>
+
+
+        <!-- Attendance -->
+
+        <a href="attendance.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <span>Attendance</span>
+
+        </a>
+
+
+
+        <p class="menu-title">
+            ACADEMIC
+        </p>
+
+
+        <!-- Exams -->
+
+        <a href="exams.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Exams & Marks</span>
+
+        </a>
+
+
+        <!-- Fees -->
+
+        <a href="fees.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <span>Fees</span>
+
+        </a>
+
+
+
+        <p class="menu-title">
+            MANAGEMENT
+        </p>
+
+
+        <!-- Reports -->
+
+        <a href="reports.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+
+        <!-- Notifications -->
+
+        <a href="notifications.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>Notifications</span>
+
+            <span class="notification-count">
+                3
+            </span>
+
+        </a>
+
+
+        <!-- Settings -->
+
+        <a href="settings.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+            <div class="help-icon">
+
+                <i class="fa-solid fa-circle-question"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Need Help?</strong>
+
+                <span>Contact support</span>
+
+            </div>
+
+        </div>
+
+
+        <a href="student management.html"
+           class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =================================================
+     MAIN CONTENT
+================================================= -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================= -->
+
+    <header class="top-header">
+
+
+        <!-- Mobile Menu -->
+
+        <button class="menu-button"
+                id="menuButton">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- Page Title -->
+
+        <div class="page-title">
+
+            <h1>Dashboard</h1>
+
+            <p>
+                Welcome back! Here's your system overview.
+            </p>
+
+        </div>
+
+
+
+        <!-- Header Actions -->
+
+        <div class="header-actions">
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search students...">
+
+            </div>
+
+
+
+            <!-- Dark Mode -->
+
+            <button
+                class="icon-button"
+                id="themeButton"
+                title="Toggle theme">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+
+            <!-- Notification -->
+
+            <a href="notifications.html"
+               class="icon-button notification-button">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </a>
+
+
+
+            <!-- Profile -->
+
+            <a href="settings.html"
+               class="profile">
+
+                <div class="profile-image">
+
+                    G
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>Gagan</strong>
+
+                    <span>Administrator</span>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         DASHBOARD
+    ================================================= -->
+
+    <section class="dashboard">
+
+
+        <!-- Date + Add Student -->
+
+        <div class="dashboard-top">
+
+
+            <div class="date-information">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <div>
+
+                    <span>Today</span>
+
+                    <strong id="currentDate">
+                        Loading...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a href="add-student.html"
+               class="add-student-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Student
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================= -->
+
+        <div class="stats-grid">
+
+
+            <!-- Total Students -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon students-icon">
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                </div>
+
+                <div class="stat-details">
+
+                    <span>Total Students</span>
+
+                    <h2 class="counter"
+                        data-target="1248">
+
+                        0
+
+                    </h2>
+
+                    <p class="growth positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        12.5%
+
+                        <span>
+                            from last month
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Faculty -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon faculty-icon">
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                </div>
+
+                <div class="stat-details">
+
+                    <span>Total Faculty</span>
+
+                    <h2 class="counter"
+                        data-target="86">
+
+                        0
+
+                    </h2>
+
+                    <p class="growth positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        4.8%
+
+                        <span>
+                            from last month
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Courses -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon course-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div class="stat-details">
+
+                    <span>Active Courses</span>
+
+                    <h2 class="counter"
+                        data-target="42">
+
+                        0
+
+                    </h2>
+
+                    <p class="growth neutral">
+
+                        <i class="fa-solid fa-minus"></i>
+
+                        0%
+
+                        <span>
+                            no change
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Attendance -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon attendance-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div class="stat-details">
+
+                    <span>Average Attendance</span>
+
+                    <h2>94.2%</h2>
+
+                    <p class="growth positive">
+
+                        <i class="fa-solid fa-arrow-up"></i>
+
+                        2.1%
+
+                        <span>
+                            from last month
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT GRID
+        ================================================= -->
+
+        <div class="content-grid">
+
+
+            <!-- =================================================
+                 RECENT STUDENTS
+            ================================================= -->
+
+            <div class="dashboard-card students-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Recent Students</h3>
+
+                        <p>
+                            Recently registered students
+                        </p>
+
+                    </div>
+
+
+                    <a href="students.html"
+                       class="view-all">
+
+                        View All
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Student Table -->
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Student</th>
+
+                                <th>Student ID</th>
+
+                                <th>Department</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="studentTable">
+
+
+                            <!-- Student 1 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="student">
+
+                                        <div class="student-avatar">
+                                            AK
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Arun Kumar
+                                            </strong>
+
+                                            <span>
+                                                arun@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    STU00124
+                                </td>
+
+                                <td>
+                                    Computer Science
+                                </td>
+
+                                <td>
+
+                                    <span class="status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 2 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="student">
+
+                                        <div class="student-avatar purple">
+                                            PR
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Priya R
+                                            </strong>
+
+                                            <span>
+                                                priya@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    STU00125
+                                </td>
+
+                                <td>
+                                    Artificial Intelligence
+                                </td>
+
+                                <td>
+
+                                    <span class="status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 3 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="student">
+
+                                        <div class="student-avatar orange">
+                                            VK
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Vignesh Kumar
+                                            </strong>
+
+                                            <span>
+                                                vignesh@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    STU00126
+                                </td>
+
+                                <td>
+                                    Data Science
+                                </td>
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 4 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="student">
+
+                                        <div class="student-avatar green">
+                                            SM
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Siva Mani
+                                            </strong>
+
+                                            <span>
+                                                siva@example.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    STU00127
+                                </td>
+
+                                <td>
+                                    Computer Applications
+                                </td>
+
+                                <td>
+
+                                    <span class="status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================= -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Quick Actions</h3>
+
+                        <p>
+                            Frequently used actions
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="quick-actions">
+
+
+                    <!-- Add Student -->
+
+                    <a href="add-student.html"
+                       class="quick-action">
+
+                        <div class="quick-icon blue">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+                        <span>
+                            Add Student
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+
+                    </a>
+
+
+
+                    <!-- Faculty -->
+
+                    <a href="add-faculty.html"
+                       class="quick-action">
+
+                        <div class="quick-icon purple">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                        </div>
+
+                        <span>
+                            Add Faculty
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+
+                    </a>
+
+
+
+                    <!-- Course -->
+
+                    <a href="add-course.html"
+                       class="quick-action">
+
+                        <div class="quick-icon orange">
+
+                            <i class="fa-solid fa-book-medical"></i>
+
+                        </div>
+
+                        <span>
+                            Add Course
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+
+                    </a>
+
+
+
+                    <!-- Attendance -->
+
+                    <a href="attendance.html"
+                       class="quick-action">
+
+                        <div class="quick-icon green">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                        </div>
+
+                        <span>
+                            Mark Attendance
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BOTTOM GRID
+        ================================================= -->
+
+        <div class="bottom-grid">
+
+
+            <!-- Attendance -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Today's Attendance</h3>
+
+                        <p>
+                            Overall student attendance
+                        </p>
+
+                    </div>
+
+                    <strong class="attendance-number">
+                        94.2%
+                    </strong>
+
+                </div>
+
+
+                <div class="attendance-progress">
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-value"
+                            style="width: 94.2%">
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-labels">
+
+                        <span>
+                            <i class="fa-solid fa-circle"></i>
+                            Present: 1,176
+                        </span>
+
+                        <span>
+                            Absent: 72
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="attendance.html"
+                   class="card-link">
+
+                    View Attendance
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Notifications -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Recent Notifications</h3>
+
+                        <p>
+                            Latest system updates
+                        </p>
+
+                    </div>
+
+                    <a href="notifications.html"
+                       class="view-all">
+
+                        View All
+
+                    </a>
+
+                </div>
+
+
+                <div class="notification-list">
+
+
+                    <div class="notification-item">
+
+                        <div class="notification-icon blue">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                New student registered
+                            </strong>
+
+                            <span>
+                                5 minutes ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notification-item">
+
+                        <div class="notification-icon orange">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Attendance updated
+                            </strong>
+
+                            <span>
+                                30 minutes ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notification-item">
+
+                        <div class="notification-icon green">
+
+                            <i class="fa-solid fa-file-circle-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Monthly report generated
+                            </strong>
+
+                            <span>
+                                2 hours ago
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =================================================
+     JAVASCRIPT
+================================================= -->
+
+<script src="home.js"></script>
+
+
+</body>
+
+</html>
+
