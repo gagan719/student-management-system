@@ -1,0 +1,255 @@
+
+/* =========================================
+   STUDENT MANAGEMENT SYSTEM
+   Registration Page CSS
+========================================= */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #eef4ff,
+        #dbeafe
+    );
+
+    color: #1e293b;
+}
+
+/* =========================================
+   Main Container
+========================================= */
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.15);
+
+    border: 1px solid #e2e8f0;
+}
+
+/* =========================================
+   Heading
+========================================= */
+
+.container h2 {
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #1e40af;
+
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   Form
+========================================= */
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* =========================================
+   Input Fields
+========================================= */
+
+.container input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #1e293b;
+
+    background: #f8fafc;
+
+    transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.container input::placeholder {
+    color: #94a3b8;
+}
+
+/* Input Focus */
+.container input:focus {
+    border-color: #2563eb;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+/* =========================================
+   Password Eye Icon
+========================================= */
+
+.container form {
+    position: relative;
+}
+
+/* Eye icon */
+#eye {
+    position: absolute;
+
+    right: 15px;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+#eye:hover {
+    color: #2563eb;
+}
+
+/* =========================================
+   Register Button
+========================================= */
+
+.container button {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.container button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+/* Button Click */
+.container button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   Login Text
+========================================= */
+
+.container > p {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+/* Login Link */
+.container > p a {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+    transition: 0.3s ease;
+}
+
+/* Link Hover */
+.container > p a:hover {
+    color: #1d4ed8;
+
+    text-decoration: underline;
+}
+
+/* =========================================
+   Responsive Design
+========================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 30px 22px;
+
+        border-radius: 16px;
+    }
+
+    .container h2 {
+        font-size: 25px;
+    }
+
+    .container input {
+        height: 48px;
+    }
+
+    .container button {
+        height: 50px;
+    }
+}
+
