@@ -1,4 +1,4 @@
-```javascript
+
 // ==========================================
 // STUDENT MANAGEMENT SYSTEM
 // Registration Page JavaScript
@@ -369,4 +369,4 @@ email.addEventListener(
 
     }
 );
-```
+
